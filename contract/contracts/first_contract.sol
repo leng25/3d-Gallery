@@ -3,19 +3,22 @@ pragma solidity >=0.4.22 <0.9.0;
 
 contract first_contract {
 
+    string world = "hello";
+
+    function get() public view returns (string memory){
+       return world;
+    }
+
     struct User{
-        string name;
         string[5] urls;
         uint256 counter;
-        bool creater;
         address[] friends;
     }
 
     mapping(address => User) public accounts;
     address public owner;
 
-    function addString(string memory url_name) public{
-        require(accounts[msg.sender].creater);
+    function addPicture(string memory url_name) public{
         uint256 count = accounts[msg.sender].counter;    
         if(count==5){
             count = 0;
@@ -25,8 +28,7 @@ contract first_contract {
         accounts[msg.sender].counter = count;
     }
 
-    function getString(uint256 n) public view returns (string memory){
-       require(accounts[msg.sender].creater);
+    function getpicture(uint256 n) public view returns (string memory){
        return accounts[msg.sender].urls[n];
     }
 
@@ -47,18 +49,9 @@ contract first_contract {
 //    }
 
     function addFrind(address friend_request_address) public {
-        require(accounts[friend_request_address].creater);
         accounts[msg.sender].friends.push(friend_request_address);
     }
     function getFriendsAddress() public view returns (address[] memory){
         return accounts[msg.sender].friends;
-    }
-
-    
-    function createAcount(string memory name) public {
-        require(!accounts[msg.sender].creater);
-        accounts[msg.sender].name = name;
-        accounts[msg.sender].counter =0;
-        accounts[msg.sender].creater = true;
     }
 }

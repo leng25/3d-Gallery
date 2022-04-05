@@ -80,4 +80,8 @@ contract first_contract {
        return accounts[msg.sender].name;
     }
 
+        function setname(string memory name) public {
+        require(accounts[msg.sender].creater);
+        accounts[msg.sender].name = name;
+    }
 }

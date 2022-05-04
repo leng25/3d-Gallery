@@ -1,50 +1,50 @@
 /* CSS for the 3d login Page */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  #dbox{
-    position:fixed;
-    height:100%;
-    width:100%;
-    z-index:-1;
-    overflow: hidden;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  #TestBox{
-    position:fixed;
-    height:80%;
-    width:80%;
-    z-index:-1;
-    overflow: hidden;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  canvas{
-    background-color: black;
-  }
-  
-  h1{
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    color:white;
-  }
-  
-  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#dbox{
+  position:fixed;
+  height:100%;
+  width:100%;
+  z-index:-1;
+  overflow: hidden;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+#TestBox{
+  position:fixed;
+  height:80%;
+  width:80%;
+  z-index:-1;
+  overflow: hidden;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+canvas{
+  background-color:rgb(88, 179, 91);
+}
+
+
+h1{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:white;
+}
+

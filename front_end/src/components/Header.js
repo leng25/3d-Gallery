@@ -1,6 +1,8 @@
 import React from "react";
 import Navigation from "./Navigation";
 import SecondLogo from './HomePage/Headeredit.png'
+import DarkLogo from './HomePage/HeadereditDark.png'
+
 
 function Header() {
     return(

@@ -390,6 +390,14 @@ li:hover{
   padding:auto;
 }
 
+#FriendsList input{
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  border:solid green .2em;
+  margin-bottom:5%;
+}
+
 #FriendsList li{
   list-style: none;
   text-decoration: none;

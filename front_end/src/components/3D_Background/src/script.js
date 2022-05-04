@@ -83,11 +83,11 @@ gltfLoader.load(
 		genesisLogo.add(gltf.scene)
         scene.add( genesisLogo );
 
-		gltf.animations; // Array<THREE.AnimationClip>
-		gltf.scene; // THREE.Group
-		gltf.scenes; // Array<THREE.Group>
-		gltf.cameras; // Array<THREE.Camera>
-		gltf.asset; // Object
+		//gltf.animations; // Array<THREE.AnimationClip>
+		//gltf.scene; // THREE.Group
+		//gltf.scenes; // Array<THREE.Group>
+		//gltf.cameras; // Array<THREE.Camera>
+		//gltf.asset; // Object
         
 	}
 )

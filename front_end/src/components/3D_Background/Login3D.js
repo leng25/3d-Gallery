@@ -8,6 +8,7 @@ import {TextureLoader} from 'three/src/loaders/TextureLoader';
 import Texture from './rock.jpg'
 import { OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei';
 import './Style.css'
+import { Camera } from 'three';
 
 
 const Box = (props) => {
@@ -43,8 +44,8 @@ const DBox = () => {
     return (
       <div id="dbox">
       <Canvas>
-        <Stars  />
-        <OrbitControls  enableZoom={false} enablePan={false}/>
+        <Stars />
+        <OrbitControls  enableZoom={false} enablePan={false} autoRotate={true}/>
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />

@@ -36,8 +36,9 @@ body {
   }
   
   canvas{
-    background-color: black;
+    background-color:rgb(88, 179, 91);
   }
+
   
   h1{
     position:fixed;

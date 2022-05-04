@@ -285,7 +285,8 @@ function FriendsList() {
     const getfriend = (event) =>{
         Contract.methods.getFriendsAddress().call({from:account}).then((response)=>{
             //console.log(response)
-            settestFri(response)
+            let removedup = [...new Set(response)]
+            settestFri(removedup)
             //console.log(testFri)
         })
     }
@@ -313,7 +314,7 @@ function FriendsList() {
         
 
         for (let n=0; n < count; n++){
-            Contract.methods.getname().call({from:Friends[n]}).then((response)=>{
+            Contract.methods.getname().call({from:testFri[n]}).then((response)=>{
                 //console.log(response)
                 //setFriendsnames(response)
                 setFriendsnames(friendsnames => [response,...friendsnames]);
@@ -323,7 +324,7 @@ function FriendsList() {
         }
         let testing = [...new Set(friendsnames)]
         settestFname(testing)
-        console.log(testFname)
+        //console.log('TESTFNAME: ' + testFname)
         //console.log('ACCOUNT NAME: ' + testFname)
 
     }
@@ -332,7 +333,8 @@ function FriendsList() {
 
     useEffect(() => {
         async function loadnames(){
-            return getfriend()
+            //console.log(testFname.length)
+            return getfriend() 
             
             
         }
@@ -372,8 +374,8 @@ function FriendsList() {
                 <h3>Friends List</h3>
                 
                 {/*<h4 onClick={() => navigate('/FriendsPage')}>{FriendsName}</h4>*/}
-                {//<button type="button" onClick={()=>{testgetname()}} >TEST</button>
-                /*<button type="button" onClick={()=>{getfriend()}} >TEST FRIENDS</button>*/}
+                {/*<button type="button" onClick={()=>{testgetname()}} >TESTGETNAME</button>
+                /*<button type="button" onClick={()=>{getfriend()}} >GETFRIENDS</button>*/}
 
                 
                 {testFname.map((names) =>{

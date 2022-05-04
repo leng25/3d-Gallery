@@ -1,0 +1,224 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v1.7.33",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0,
+        1
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "path346",
+      "scale": [
+        31.638355255126953,
+        31.638355255126953,
+        31.638355255126953
+      ],
+      "translation": [
+        -1.6675142049789429,
+        0.15251441299915314,
+        1.6584506034851074
+      ]
+    },
+    {
+      "mesh": 1,
+      "name": "path338",
+      "scale": [
+        31.638355255126953,
+        31.638355255126953,
+        31.638355255126953
+      ],
+      "translation": [
+        -1.6675142049789429,
+        0.15251441299915314,
+        1.6584506034851074
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "SVGMat.012",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5175378322601318,
+          0.5983969569206238,
+          0.09284968674182892,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.4000000059604645
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "SVGMat.016",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.007820523343980312,
+          0.10878995060920715,
+          0.0052461219020187855,
+          1
+        ],
+        "metallicFactor": 0.04727272689342499,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "path346",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "name": "path338",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 11900,
+      "max": [
+        0.10768068581819534,
+        0.0020000000949949026,
+        -0.014076276682317257
+      ],
+      "min": [
+        0.02011745236814022,
+        -0.0020000000949949026,
+        -0.1104372963309288
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 11900,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 11900,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 21540,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 9944,
+      "max": [
+        0.10728594660758972,
+        0.0020000000949949026,
+        -0.013965733349323273
+      ],
+      "min": [
+        0.02052151970565319,
+        -0.0020000000949949026,
+        -0.11045841872692108
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 9944,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 9944,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 18204,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 142800,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 142800,
+      "byteOffset": 142800
+    },
+    {
+      "buffer": 0,
+      "byteLength": 95200,
+      "byteOffset": 285600
+    },
+    {
+      "buffer": 0,
+      "byteLength": 43080,
+      "byteOffset": 380800
+    },
+    {
+      "buffer": 0,
+      "byteLength": 119328,
+      "byteOffset": 423880
+    },
+    {
+      "buffer": 0,
+      "byteLength": 119328,
+      "byteOffset": 543208
+    },
+    {
+      "buffer": 0,
+      "byteLength": 79552,
+      "byteOffset": 662536
+    },
+    {
+      "buffer": 0,
+      "byteLength": 36408,
+      "byteOffset": 742088
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "GenesisLogo3_data.bin",
+      "byteLength": 778496
+    }
+  ]
+}

@@ -41,11 +41,11 @@ function FriendsList() {
       const [hash,setHash] = useState("QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ") /* Hash for the first picture */
       const [buffer, setBuffer] = useState(null) /* Hook for the Buffer */
      
-      const [FpicTest,setFPicTest] = useLocalStorageState('Fpicture_one','QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
-      const [FpicTestTwo,setFPicTestTwo] = useLocalStorageState('Fpicture_two','QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
-      const [FpicTestThree,setFPicTestThree] = useLocalStorageState('Fpicture_three','QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
-      const [FpicTestFour,setFPicTestFour] = useLocalStorageState('Fpicture_four','QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
-      const [FpicTestFive,setFPicTestFive] = useLocalStorageState('Fpicture_five','QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
+      const [FpicTest,setFPicTest] = useState('QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
+      const [FpicTestTwo,setFPicTestTwo] = useState('QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
+      const [FpicTestThree,setFPicTestThree] = useState('QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
+      const [FpicTestFour,setFPicTestFour] = useState('QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
+      const [FpicTestFive,setFPicTestFive] = useState('QmWp9s7onE9wJPFBng6swV5n65GHNKeoePsgWKLUikPHaQ')
 
       let navigate = useNavigate()
 
@@ -110,45 +110,7 @@ function FriendsList() {
         })
       }
 
-      const getFPicturesOne = (event) =>{
-          Contract.methods.getpicture(0).call({from:Friends[0]}).then((response) =>{
-              //console.log(response)
-              setFPicTest(response)
-              
-          })
-      }
-
-      const getFPicturesTwo = (event) =>{
-        Contract.methods.getpicture(1).call({from:Friends[0]}).then((response) =>{
-            //console.log(response)
-            setFPicTestTwo(response)
-            
-        })
-    }
-
-    const getFPicturesThree = (event) =>{
-        Contract.methods.getpicture(2).call({from:Friends[0]}).then((response) =>{
-            //console.log(response)
-            setFPicTestThree(response)
-            
-        })
-    }
-
-    const getFPicturesFour = (event) =>{
-        Contract.methods.getpicture(3).call({from:Friends[0]}).then((response) =>{
-            //console.log(response)
-            setFPicTestFour(response)
-            
-        })
-    }
-
-    const getFPicturesFive = (event) =>{
-        Contract.methods.getpicture(4).call({from:Friends[0]}).then((response) =>{
-            //console.log(response)
-            setFPicTestFive(response)
-            
-        })
-    }
+      
       /*TEST*/
         const [testName, setTestName] = useLocalStorageState('name','Not Selected')
         const [changename, setchangename] = useState('')
@@ -186,7 +148,7 @@ function FriendsList() {
     useEffect(() => {
         async function loadpic(){
             if (FpicTest == undefined){
-                return getFPicturesOne(),getFPicturesTwo(),getFPicturesThree(),getFPicturesFour(),getFPicturesFive(),getName()
+                return 
             }
         }
         loadpic();
@@ -228,22 +190,88 @@ function FriendsList() {
         keepTheme();
     })
 
-    const [FriendPage, setFriendPage] = useState('')
+    const [FriendPage, setFriendPage] = useState({
+        name:'TEST',
+        num:''
+    })
     const [Showpage, setShowPage] = useState(false)
 
-    const Friendpage = (Friend) =>{
+    const Friendpage = (Friend,Loc) =>{
+        let friendaccount = testFri[FriendPage.num]
+        let friendname = FriendPage.name
+
+        //console.log(FriendPage.name + FriendPage.num + testFri[FriendPage.num])
+        
+        const testgetpic = () =>{
+            const count = testFri.length
+            //console.log("TEST")
+            //console.log('THE ACCOUNT: '+ testFri)        
+    
+            
+    
+             
+                    Contract.methods.getpicture(0).call({from:friendaccount}).then((response) =>{
+                        //console.log(response)
+                        setFPicTest(response)
+                        return
+                        
+                    })
+                
+          
+               
+                  Contract.methods.getpicture(1).call({from:friendaccount}).then((response) =>{
+                      //console.log(response)
+                      setFPicTestTwo(response)
+                      return
+                      
+                  })
+              
+          
+                  Contract.methods.getpicture(2).call({from:friendaccount}).then((response) =>{
+                      //console.log(response)
+                      setFPicTestThree(response)
+                      return
+                      
+                  })
+              
+          
+                  Contract.methods.getpicture(3).call({from:friendaccount}).then((response) =>{
+                      //console.log(response)
+                      setFPicTestFour(response)
+                      return
+                      
+                  })
+              
+          
+                  Contract.methods.getpicture(4).call({from:friendaccount}).then((response) =>{
+                      //console.log(response)
+                      setFPicTestFive(response)
+                      return
+                      
+                  })
+              
+    
+                  
+           return 
+        }
+            
+            testgetpic()
+        
         return(
-            <section id="HomeContainer">
+            <section>
                 
                 <section id="MainTitle">
                     <article id="Navigation"> </article>
                 </section>
                 <section id="About">
                     <h3>About</h3>
+
                     <p id="ProfilePic"></p>
+                    <h4>{friendname}</h4>
+
                        
-                    <h4>{Friend}</h4>
                     <button type="button" id="FollowButton" onClick={() => setFollow('Following')}>{follow}</button>
+
                 </section>
 
                 <section id="UserPics">
@@ -317,9 +345,12 @@ function FriendsList() {
             Contract.methods.getname().call({from:testFri[n]}).then((response)=>{
                 //console.log(response)
                 //setFriendsnames(response)
-                setFriendsnames(friendsnames => [response,...friendsnames]);
+                setFriendsnames(friendsnames => [...friendsnames,response]);
                 
             })
+
+            
+               
 
         }
         let testing = [...new Set(friendsnames)]
@@ -328,13 +359,14 @@ function FriendsList() {
         //console.log('ACCOUNT NAME: ' + testFname)
 
     }
+    
 
     
 
     useEffect(() => {
         async function loadnames(){
             //console.log(testFname.length)
-            return getfriend() 
+            return getfriend()
             
             
         }
@@ -357,6 +389,21 @@ function FriendsList() {
         loadnamestest();
       } )
 
+      /*useEffect(() => {
+        async function loadnamestest(){
+            if(testFname.length !== testFri.length){
+             return testgetpic()
+            }
+
+            else{
+                return
+            }
+            
+            
+        }
+        loadnamestest();
+      },[] )*/
+
 
 
     const DFrinendpage = () =>{
@@ -378,10 +425,10 @@ function FriendsList() {
                 /*<button type="button" onClick={()=>{getfriend()}} >GETFRIENDS</button>*/}
 
                 
-                {testFname.map((names) =>{
+                {testFname.map((names,index) =>{
                     return(
                     <ul>
-                    <li onClick={() => {setFriendPage(names)}}>{names}<br /><button onClick={() => {setShowPage(true)}}>SHOW</button></li>
+                    <li onClick={() => {setFriendPage({name: names, num: index})}}>{names}<br /><button onClick={() => {setShowPage(true)}}>SHOW</button></li>
                     </ul>
                     )
                 })}
@@ -414,7 +461,7 @@ function FriendsList() {
         <section id="HomeContainer">
            <Header />
                     
-                    {Showpage ? Friendpage(FriendPage) : DFrinendpage()}
+                    {Showpage ? Friendpage(FriendPage,FriendPage.index) : DFrinendpage()}
                 
 
         </section>

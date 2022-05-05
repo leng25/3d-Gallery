@@ -417,6 +417,36 @@ li:hover{
   font-weight:bold
 }
 
+#TrendingList img{
+  width:30em;
+  height: 30em;
+}
+
+#TrendingList li{
+  list-style:none;
+}
+
+#TrendingList h3{
+  font-size: 3em;
+}
+
+#Notifications li{
+  list-style: none;
+}
+
+#Notifications ul{
+  text-align:start;
+  margin-left:30%;
+}
+
+#Notifications span{
+  color:green;
+}
+
+#Notifications h3{
+  font-size: 3em;
+}
+
 
 
 

@@ -167,9 +167,9 @@ function Trending() {
             <section id="TrendingList">
                 <h3>Trending</h3> <br />
                 <o1>
-                    <li><h2>1. @testing</h2><img id='P1'src={`https://ipfs.infura.io/ipfs/${trendingimg}`} /></li>
-                    <li><h2>2. @testing</h2><img id='P1'src={`https://ipfs.infura.io/ipfs/${trendingimg}`} /></li>
-                    <li><h2>3. @testing</h2><img id='P1'src={`https://ipfs.infura.io/ipfs/${trendingimg}`} /></li>
+                    <li><h2>1. <span>@Shimul</span></h2><img id='P1'src={`https://ipfs.infura.io/ipfs/QmUWWFyUjVtxZ2GghjZdKLrzWuySnXR2LjMSfdiqgrMz82`} /></li>
+                    <li><h2>2. <span>@Toyibat</span></h2><img id='P1'src={`https://ipfs.infura.io/ipfs/QmeZxXzJ3ZM3FTcVU1CuaM3wK3xrE3KoJLPbmMqunbjZJY`} /></li>
+                    <li><h2>3. <span>@Kylelle</span></h2><img id='P1'src={`https://ipfs.infura.io/ipfs/QmQqw3S9bUdSkRmUAWAU95siZ5LcRarMRVoYWZeRYYU5pA`} /></li>
 
                 </o1>
                 {/*<button type="submit" onClick={() => getfriend()}>Get Friend</button>*/} {/*Get Friends through effect not through button*/}

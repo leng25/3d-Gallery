@@ -167,12 +167,12 @@ function Noti() {
             <section id="Notifications">
                 <h3>Notifications</h3> <br />
                 <ul>
-                    <li><h2><span>@testing </span>posted a new picture</h2></li>
-                    <li><h2><span>@testing</span> posted a new picture</h2></li>
-                    <li><h2><span>@testing</span> changed their username</h2></li>
-                    <li><h2><span>@testing</span> added you as a friend</h2></li>
-                    <li><h2><span>@testing</span> followed you</h2></li>
-                    <li><h2><span>@testing</span> added you as a friend</h2></li>
+                    <li><h2><span>@Luis </span>posted a new picture</h2></li>
+                    <li><h2><span>@Toyibat</span> posted a new picture</h2></li>
+                    <li><h2><span>@David</span> changed their username</h2></li>
+                    <li><h2><span>@Shimul</span> added you as a friend</h2></li>
+                    <li><h2><span>@Kylelle</span> followed you</h2></li>
+                    <li><h2><span>@Shimul</span> added you as a friend</h2></li>
 
 
 

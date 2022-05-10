@@ -12,6 +12,7 @@ import Web3 from "web3";
 import Modal from "react-modal";
 import { keepTheme } from '../theme';
 import EditNameLogo from './EditName.ico'
+import DefaultPic from './Nav_Icons/DefaultPic.jpg'
 
 
 const customStyles = {
@@ -231,7 +232,7 @@ function Home() {
             <Header />
             <section id="About">
                 <h3>About</h3>
-                <p id="ProfilePic"></p>
+                <p id="ProfilePic"><img src={DefaultPic} /></p><br/>
                 <img onClick={openModal} src={EditNameLogo} />
                 <Modal
                     isOpen={modalIsOpen}

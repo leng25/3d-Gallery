@@ -110,12 +110,14 @@ li:hover{
   font-size: 1.5em;
 }
 
-#About p{
+#About #ProfilePic img{
   border:2px black solid;
   border-radius:100%;
   color:white;
   height: 9em;
+  width:9em;
   margin-bottom:5%;
+  margin-left:1%;
 }
 
 #About #FollowButton{
@@ -440,6 +442,10 @@ li:hover{
 }
 
 #Notifications span{
+  color:green;
+}
+
+#TrendingList span{
   color:green;
 }
 
